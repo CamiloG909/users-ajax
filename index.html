@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#1CCC5B" />
+		<link rel="stylesheet" href="styles/loader.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+		<meta name="description" content="Users with AJAX">
+		<title>Users | PHP</title>
+	</head>
+	<body>
+		<header class="container header">
+			<img class="header__img" src="assets/logo.png" alt="Logo header" onclick="window.location.reload();" />
+			<button class="header__btn" id="reload-users" type="button">
+				Reload <i class="bi bi-arrow-clockwise"></i>
+			</button>
+		</header>
+		<main>
+			<form id="add-user" class="container add-user">
+				<input type="text" name="name" placeholder="Name">
+				<input type="number" name="age" placeholder="Age">
+				<input type="email" name="email" placeholder="Email">
+				<input type="text" name="country" placeholder="Country">
+				<button type="submit" class="btn">Add <i class="bi bi-plus-lg"></i></button>
+			</form>
+			<p class="container error-text"><i class="bi bi-exclamation-triangle-fill"></i> An ocurred error with db.</p>
+			<section class="container users">
+				<table id="table-users" class="users__table">
+					<thead class="users__table-header">
+						<th>ID</th>
+						<th>NAME</th>
+						<th>AGE</th>
+						<th>EMAIL</th>
+						<th>COUNTRY</th>
+					</thead>
+					<tbody class="users__table-body">
+					</tbody>
+				</table>
+				<div class="lds-ripple" id="loader"><div></div><div></div></div>
+			</section>
+		</main>
+		<script src="js/main.js"></script>
+	</body>
+</html>
